@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Data</title>
+    <style>
+        body {
+            background-color: cadetblue;
+        }
+        h2 {
+            font-weight: 900;
+        }
+        input[type=text]{
+            width 100%;
+            box-sizing: border-box;
+        }
+        input[type=text]:focus{          /*Styling the boxes of text*/
+            background-color: coral;
+        }
+        input[type=text]:hover{
+            background-color: palegoldenrod;
+        }
+        input[type=button],input[type=submit],input[type=reset]{
+            background-color: pink;
+            border: none;
+            color:white;
+            padding: 14px 30px;
+            margin:4px 2px;                  /*For gaps b/w two buttons*/ 
+            cursor:progress;        /*It will show processing icon when cursor points on the buttons,submit and reset*/
+        }
+    </style>
+</head>
+<body>
+                   <center><h2 style="color:rgb(249, 253, 24);">Payment Form</h2></center> 
+      <h2>  The datalist element specifies a list of predefined options for an input element</h2>
+
+       <form action="backend.php" method="get" autocomplete="on">
+      Select the Browser type:
+           <input list="browsers" name="browser">    
+
+        <datalist id="browsers">
+                <option value="Brave">
+                    <option value="Chrome">
+                        <option value="Firefox">
+                            <option value="Opera">
+        </datalist>  
+        <br>
+           <label for="mynaam">Name:</label>                  <!--Label tag for giving id to name means we click on Name text it will blink the text area box-->
+           <input type="text" name="my_name" id="mynaam" >            <!---label for is same as id-->
+         
+       <div>
+           Role: <input type="text" name="my_role"> 
+       </div>
+
+       <div>
+        Email: <input type="email" name="my_email">
+       </div>
+      
+    <div>
+      Password: <input type="password" name="yourpass">
+    </div>
+
+       <div>
+      Date: <input type="date" name="my_date">
+       </div>
+       
+       <div>
+           Bonus:<input type="number" name="my_bonus">      <!--Only e works in number tag for 10 to the power-->
+        </div>
+        
+        <div>
+            <label for="eligible">Are you eligible:</label>          <!--Label tag is used and ,clicking Are you eligible will check or uncheck the checkbox-->
+          <input type="checkbox" name="my_eligible" id="eligible" required checked>     <!--checked tag to be used for showing checked by default-->
+        </div>
+        <br>
+        <div>
+            <fieldset>
+                <legend>GENDER</legend>
+                Male: <input type="radio" name="mygender">
+                Female: <input type="radio" name="mygender"><br>
+                If Other Specify:  <input type="text" name="field_set">
+            </fieldset>
+        </div>
+       
+         <div>
+            <br>
+            Write about yourself: <textarea name="myarea" rows="7" cols="90">Sample Text</textarea>
+         </div>
+         
+        <div>
+
+            <label for="caran">Car Type:</label>       <!--Label tag is used-->
+            
+                <select id="caran" name="car_type" required>
+
+                <option value="" selected>---Select a Car Type---</option>
+                <option value="sdn">Sedan</option>
+                <option value="suv">SUV</option>
+                <option value="htb">Hatchback</option>
+              </select>
+        </div>
+              
+            <div>
+                <label for="myfile"> Upload your Resume:</label>
+               <input type="file" name="myfile" id="myfile">
+                <br>
+            </div>
+              
+            <div>
+                <h2>HTML buttons are defined with the button tag</h2>
+                <button type="button" style="background-color: yellowgreen;padding: 10px 10px;">This button is made by button tag not input buttons so different styling</button>
+                <!--OR We can also write it like this-->
+                <input type="button" value="Click me"> 
+            </div>
+
+              <div>
+                <input type="submit" value="Fill and Send">
+                <input type="reset" value="Reset Now">
+              </div>
+       </form>
+</body>
+</html>

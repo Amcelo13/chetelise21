@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form Data</title>
+
+    <!-- input element attributes type="text",name="firstname",value="Male"  -->
+    <!-- <textarea cols="64" rows"8"> </textarea> -->
+   <!-- <select>element for list option with <option value="abc">ABC</option> </select> -->
+</head>
+<body>
+      <form action="">
+          <h1>Payment Form</h1>
+          <h2>Contact Information</h2>
+          <p>Required Fields are *</p>
+          <p> 
+             First Name:*<input type="text" name="name" id="we" required><br>
+             Last Name:<input type="text" name="name" id="wen">
+            </p>
+          <!-- name tag is used for linking with server -->
+          <p>
+              <fieldset>                        <!--For the box of gender -->
+             <legend>GENDER</legend>            <!--Legend for the heading along the box-->    
+              Male <input type="radio" name="gender" id="male" required><br>
+              Female <input type="radio" name="gender" id="female" required>
+            </fieldset>
+          </p>
+          <p>
+              Adrress:<textarea name="address" cols="50" rows="5" id="address" required>Heloo</textarea>
+          </p>
+          <p>
+               Email:*<input type="email" name="email" id="email" required>
+               <p>
+                   Pincode:<input type="number" name="pincode" id="pincode" required>
+               </p>
+               <p>
+                   Contact NO.:<input type="tel" name="telephone" id="telephone" required>
+               </p>
+          <hr>
+          <p>
+      Card Type:<select name="card_type" id="card_type" required>
+                   
+                  <option value="" selected>---Select a Card Type---</option>
+                  <option value="Mastercard">Mastercard</option>
+                  <option value="VISA">VISA</option>
+                  <option value="RuPay">RuPay</option>
+                </select>
+          </p>
+          <p>
+              Card NO.*: <input type="number" name="card_number" id="card_numbrer "required>
+          </p>
+          <p>
+              Expiry Date:* <input type="date" name="exp_date" id="exp-date">
+          </p>
+          <p>
+              CVV:*<input type="password" name="cvv" id="cvv" required>
+          </p>
+          <input type="submit" value="Pay Now"> 
+          <input type="reset" value="Reset"> 
+      </form>
+</body>
+</html>
