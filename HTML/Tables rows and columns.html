@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Rows and Columns</title>
+    
+<style>  
+   table.rryt{      /*Centering the table*/ 
+       margin-left: auto;                                               
+       margin-right: auto;  
+       border: 5px solid black;
+       border-collapse: separate;
+   }
+
+   td{
+       border: 1px solid black;
+   }
+   td,th{
+       padding: 5px;
+       border-collapse: collapse;
+   }
+   th{
+    background-color:grey;
+   }
+   tr:hover {                                                 /*Hovering feature color in rows*/
+       color:white;
+       background-color: teal;
+   }
+   tr:nth-child(even){    /*selecting a row completely(even or odd)*/
+          background-color: yellow;
+   }
+   th:nth-child(even){
+       color: blue;
+   }
+</style>
+</head>
+
+<body>
+                  <center><h1>Student's Result <br> Responsive Table</h1></center>
+
+                                      <!--Table starts-->
+     <div style="overflow-x:auto overflow-y: auto;">              <!--This is made for horizontal and vertical scroll works when we resize the browser window to less-->
+                                   
+ <table style="background-color:white " class="rryt" width="1000">
+
+          <caption><b>Kartoot Of Students</b></caption>
+          
+    <thead>
+        <tr>
+             <th >Subject</th>
+             <th>Theory</th>
+             <th>Practical</th>
+             <th>Total Marks</th>
+             <th>Grades</th>
+             <th>Percentage</th>
+             <th>Position</th>
+        </tr>
+    </thead>
+
+    <tbody>
+            <tr>
+                <td>English</td>
+                <td>78</td>
+                <td>67</td>
+                <td>55</td>
+                <td>A2</td>
+                <td>65%</td>
+                <td>10th</td>
+            </tr>
+            <tr>
+                <td>Maths</td>
+                <td>79</td>
+                <td>66</td>
+                <td>59</td>
+                <td>A1</td>
+                <td>84%</td>
+                <td>6th</td>
+            </tr>
+            <tr>
+                <td>CS Python</td>
+                <td>66</td>
+                <td>99</td>
+                <td>90</td>
+                <td>B1</td>
+                <td>44%</td>
+                <td>12th</td>
+            </tr>
+            <tr>
+                <td>Chemistry</td>
+                <td>79</td>
+                <td>89</td>
+                <td>59</td>
+                <td>B2</td>
+                <td>88%</td>
+                <td>3rd</td>
+            </tr>
+    </tbody>
+
+         <tfoot> 
+             <th colspan="7"> Result:-PASS !!!!!!!!! </th>  <!--To make it centered and compiling columns to a single we will use colspan-->
+         </tfoot>
+         
+    </table>
+</div>
+</body>
+</html>
